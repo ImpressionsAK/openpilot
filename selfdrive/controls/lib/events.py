@@ -582,19 +582,19 @@ EVENTS: Dict[int, Dict[str, Union[Alert, AlertCallbackType]]] = {
   },
 
   EventName.pedalPressed: {
-    ET.USER_DISABLE: EngagementAlert(AudibleAlert.disengage),
-    ET.NO_ENTRY: NoEntryAlert("Pedal Pressed",
-                              visual_alert=VisualAlert.brakePressed),
-  },
-
-  EventName.silentPedalPressed: {
-    ET.USER_DISABLE: Alert(
+    ET.WARNING: Alert(
       "",
       "",
       AlertStatus.normal, AlertSize.none,
       Priority.MID, VisualAlert.none, AudibleAlert.none, .2, 0., 0.),
-    ET.NO_ENTRY: NoEntryAlert("Pedal Pressed During Attempt",
-                              visual_alert=VisualAlert.brakePressed),
+  },
+
+  EventName.silentPedalPressed: {
+    ET.WARNING: Alert(
+      "",
+      "",
+      AlertStatus.normal, AlertSize.none,
+      Priority.MID, VisualAlert.none, AudibleAlert.none, .2, 0., 0.),
   },
 
   EventName.wrongCarMode: {
