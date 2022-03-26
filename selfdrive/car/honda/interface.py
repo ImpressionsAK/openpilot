@@ -119,7 +119,7 @@ class CarInterface(CarInterfaceBase):
       ret.centerToFront = CivicParams.CENTER_TO_FRONT
       ret.steerRatio = 15.38  # 15.38 default
       if eps_modified:
-        ret.lateralParams.torqueBP, ret.lateralParams.torqueV = [[0, 2564, 9000], [0, 2564, 3840]]
+        ret.lateralParams.torqueBP, ret.lateralParams.torqueV = [[0, 2564, 10000], [0, 2564, 3840]]
         ret.lateralTuning.init('lqr')
         ret.lateralTuning.lqr.scale = 1200.0
         ret.lateralTuning.lqr.ki = 0.1
