@@ -283,7 +283,7 @@ EVENTS: Dict[int, Dict[str, Union[Alert, AlertCallbackType]]] = {
   },
 
   EventName.startupMaster: {
-    ET.PERMANENT: StartupAlert("Custom Branch Installed: Have Fun :)",
+    ET.PERMANENT: StartupAlert("Welcome Back, Austin.",
                                alert_status=AlertStatus.userPrompt),
   },
 
@@ -647,7 +647,7 @@ EVENTS: Dict[int, Dict[str, Union[Alert, AlertCallbackType]]] = {
   },
 
   EventName.overheat: {
-    ET.PERMANENT: Alert(
+    ET.SOFT_DISABLE: Alert(
       "System Overheated",
       "",
       AlertStatus.normal, AlertSize.small,
