@@ -122,7 +122,7 @@ class CarInterface(CarInterfaceBase):
         ret.lateralParams.torqueBP, ret.lateralParams.torqueV = [[0x0, 0x6B3, 0xB1A, 0xCCD, 0xE9A, 0x104D, 0x1FB1, 0x2F16, 0x3E7B], [0x0, 0x200, 0x400, 0x600, 0x800, 0xA00, 0xC00, 0xE00, 0xF00]]
         ret.lateralTuning.init('lqr')
         ret.lateralTuning.lqr.scale = 1200.0
-        ret.lateralTuning.lqr.ki = 0.1
+        ret.lateralTuning.lqr.ki = 0.05
         ret.lateralTuning.lqr.a = [0., 1., -0.22619643, 1.21822268]
         ret.lateralTuning.lqr.b = [-1.92006585e-04, 3.95603032e-05]
         ret.lateralTuning.lqr.c = [1., 0.]
