@@ -118,7 +118,7 @@ class CarInterface(CarInterfaceBase):
       ret.wheelbase = CivicParams.WHEELBASE
       ret.centerToFront = CivicParams.CENTER_TO_FRONT
       ret.steerRatio = 15.38  # 10.93 is end-to-end spec
-      ret.lateralParams.torqueBP, ret.lateralParams.torqueV = [[0x0, 0x3E7B], [0x0, 0xF00]]
+      ret.lateralParams.torqueBP, ret.lateralParams.torqueV = [[0x0, 0x3E7B], [0x0, 4096]]
       ret.lateralTuning.init('lqr')
       ret.lateralTuning.lqr.scale = 1200.0
       ret.lateralTuning.lqr.ki = 0.05
